@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col-50">
     <app-books-list
-      [books]="books"
+      [books]="books$ | async"
       (select)="onSelect($event)"
       (delete)="onDelete($event)"
     >

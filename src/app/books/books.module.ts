@@ -10,6 +10,7 @@ import { BookDetailComponent } from "./components/book-detail/book-detail.compon
 import { BooksListComponent } from "./components/books-list/books-list.component";
 import { BooksTotalComponent } from "./components/books-total/books-total.component";
 import { StoreModule } from '@ngrx/store';
+import * as fromBooks from 'src/app/shared/state/books.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { BooksApiEffects } from './books-api.effects';
 
@@ -19,6 +20,8 @@ import { BooksApiEffects } from './books-api.effects';
     ReactiveFormsModule,
     MaterialModule,
     RouterModule.forChild([{ path: "books", component: BooksPageComponent }]),
+    StoreModule.forFeature('books', fromBooks.reducer),
+    EffectsModule.forFeature([BooksApiEffects])
   ],
   declarations: [
     BooksPageComponent,

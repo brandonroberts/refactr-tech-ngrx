@@ -12,8 +12,18 @@ import { EMPTY } from "rxjs";
 @Injectable()
 export class BooksApiEffects {
 
+  loadBooks$ = createEffect(() => 
+    this.actions$.pipe(
+      ofType(BooksPageActions.enter),
+      exhaustMap(() => 
+        this.booksService.all().pipe(
+          map(books => BooksApiActions.booksLoaded({ books })),
+          catchError(() => EMPTY)
+        )
+      )
+    )
+  );
 
-  
   constructor(
     private booksService: BooksService,
     private actions$: Actions
