@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-workshop-example": {
+    "refactr-tech-ngrx": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -35,7 +35,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-workshop-example",
+            "outputPath": "dist/refactr-tech-ngrx",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -80,18 +80,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngrx-workshop-example:build"
+            "browserTarget": "refactr-tech-ngrx:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-workshop-example:build:production"
+              "browserTarget": "refactr-tech-ngrx:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-workshop-example:build"
+            "browserTarget": "refactr-tech-ngrx:build"
           }
         },
         "test": {
@@ -126,5 +126,5 @@
       }
     }
   },
-  "defaultProject": "ngrx-workshop-example"
+  "defaultProject": "refactr-tech-ngrx"
 }

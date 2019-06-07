@@ -1,14 +1,22 @@
 {
-  "movies": [
+  "books": [
     {
       "id": "1",
-      "name": "Interstellar",
-      "rating": 4.5
+      "name": "Fellowship of the Ring",
+      "earnings": 100000000,
+      "description": "The start"
     },
     {
       "id": "2",
-      "name": "Inception",
-      "rating": 1.0
-    }
+      "name": "The Two Towers",
+      "earnings": 200000000,
+      "description": "The middle"
+    },
+    {
+      "id": "3",
+      "name": "The Return of The King",
+      "earnings": 400000000,
+      "description": "The end"
+    }    
   ]
 }
